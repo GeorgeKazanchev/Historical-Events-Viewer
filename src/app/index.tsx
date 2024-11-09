@@ -3,6 +3,8 @@ import App from './ui/app';
 import { createRoot } from 'react-dom/client';
 
 import 'normalize.css';
+import '@fontsource/bebas-neue';
+import '@fontsource/pt-sans';
 
 const root = document.querySelector('#root');
 if (!root) {
