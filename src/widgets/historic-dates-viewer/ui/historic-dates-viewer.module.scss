@@ -4,7 +4,7 @@ $padding-left-desktop: 80px;
 $padding-right-desktop: 40px;
 
 .container {
-  padding: 0 20px;
+  margin: 0 6.25%;
 
   @media (min-width: $desktop-min-width) {
     margin-left: 320px;
@@ -35,8 +35,8 @@ $padding-right-desktop: 40px;
       top: 7px;
       bottom: 7px;
       width: 5px;
-      background-color: #936acb;
-      background-image: linear-gradient(to bottom, #3877ee, #ef5da8);
+      background-color: mix($blue, $pink, 50%);
+      background-image: linear-gradient(to bottom, $blue, $pink);
     }
   }
 }

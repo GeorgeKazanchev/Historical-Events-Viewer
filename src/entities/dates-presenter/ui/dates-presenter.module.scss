@@ -1,0 +1,33 @@
+@import '/src/shared/ui/variables.scss';
+
+.container {
+  margin-top: 56px;
+  font-family: $primary-font-family;
+  font-size: 56px;
+  line-height: 72.46px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+
+  @media (min-width: $desktop-min-width) {
+    margin-top: 96px;
+    margin-left: 137px;
+    font-size: 200px;
+    line-height: 0.8;
+  }
+}
+
+.year-start {
+  color: $blue;
+
+  @media (min-width: $desktop-min-width) {
+    color: $violet;
+  }
+}
+
+.year-end {
+  color: $light-pink;
+
+  @media (min-width: $desktop-min-width) {
+    color: $pink;
+  }
+}
