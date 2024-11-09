@@ -3,6 +3,8 @@ import * as styles from './historic-dates-viewer.module.scss';
 
 export default function HistoricDatesViewer(): React.ReactNode {
   return (
-    <div className={styles.container}>Historic Dates Viewer</div>
+    <section className={styles.container}>
+      <h2 className={styles.title}>Исторические<br/>даты</h2>
+    </section>
   );
 }

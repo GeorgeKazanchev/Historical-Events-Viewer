@@ -7,5 +7,8 @@ export default function buildDevServer(options: BuildOptions): DevServerConfigur
     port: options.port,
     compress: false,
     open: true,
+    client: {
+      overlay: false,
+    },
   };
 }
