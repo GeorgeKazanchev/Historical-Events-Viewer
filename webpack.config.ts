@@ -1,8 +1,8 @@
-import path from "path";
-import webpack from "webpack";
-import buildWebpack from "./config/build-webpack";
-import { BuildMode } from "./config/types/types";
-import "webpack-dev-server";
+import path from 'path';
+import webpack from 'webpack';
+import buildWebpack from './config/build-webpack';
+import type { BuildMode } from './config/types/types';
+import 'webpack-dev-server';
 
 type EnvVariables = {
   mode: BuildMode;
@@ -16,8 +16,8 @@ export default function (env: EnvVariables) {
     mode: env.mode,
     port: env.port ?? DEFAULT_PORT,
     paths: {
-      entry: path.resolve(__dirname, "src", "app", "index.tsx"),
-      output: path.resolve(__dirname, "public"),
+      entry: path.resolve(__dirname, 'src', 'app', 'index.tsx'),
+      output: path.resolve(__dirname, 'public'),
     },
   });
   return config;

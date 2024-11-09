@@ -1,11 +1,14 @@
 {
   "name": "eventsviewer",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
-    "start": "webpack serve --env port=5000"
+    "start": "webpack serve --env port=5000",
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "@types/node": "22.9.0",
@@ -14,6 +17,7 @@
     "@types/webpack": "5.28.5",
     "@types/webpack-dev-server": "4.7.2",
     "css-loader": "7.1.2",
+    "gh-pages": "6.2.0",
     "mini-css-extract-plugin": "2.9.2",
     "sass": "1.80.6",
     "sass-loader": "16.0.3",
@@ -26,10 +30,10 @@
     "webpack-dev-server": "5.1.0"
   },
   "dependencies": {
+    "normalize.css": "8.0.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "author": "George Kazanchev",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
