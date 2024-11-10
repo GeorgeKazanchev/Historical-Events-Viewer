@@ -10,7 +10,7 @@ Thumbs.db
 # Прочее
 *.log*
 node_modules/
-public/css/
+public/**/main.css
 public/*.js
 public/*.js.map
 main.js.LICENSE.txt
