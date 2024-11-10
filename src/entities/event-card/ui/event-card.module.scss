@@ -1,0 +1,33 @@
+@import '/src/shared/ui/variables.scss';
+
+.card-faded {
+  opacity: 0.4;
+}
+
+.year {
+  font-family: $bebas-neue-font;
+  font-size: calc(16px + (25 - 16) * ((100vw - $mobile-min-width) / (720 - 320)));  /* Размер шрифта плавно изменяется от 16px до 25px */
+  line-height: 1.2;
+  font-weight: 400;
+  color: $blue;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 25px;
+  }
+}
+
+.description {
+  margin: 0;
+  margin-top: 15px;
+  block-size: fit-content;
+  font-family: $pt-sans-font;
+  font-size: calc(14px + (20 - 14) * ((100vw - $mobile-min-width) / (720 - 320)));  /* Размер шрифта плавно изменяется от 14px до 20px */
+  line-height: 1.45;
+  font-weight: 400;
+  color: $gray;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
