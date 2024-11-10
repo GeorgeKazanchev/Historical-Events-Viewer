@@ -1,0 +1,12 @@
+@import '/src/shared/ui/variables.scss';
+
+.bullet {
+  width: 6px;
+  aspect-ratio: 1;
+  background-color: $gray;
+  border-radius: 50%;
+}
+
+.bullet-faded {
+  opacity: 0.4;
+}
