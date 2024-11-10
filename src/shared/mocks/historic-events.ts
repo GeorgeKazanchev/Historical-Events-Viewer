@@ -1,7 +1,7 @@
-import Category from '../model/historic-dates-category';
-import type HistoricDate from '../model/historic-date';
+import Category from '../model/historic-events-category';
+import type HistoricEvent from '../model/historic-event';
 
-const historicDates: HistoricDate[] = [
+const historicEvents: HistoricEvent[] = [
   {
     id: 1,
     year: 2015,
@@ -64,4 +64,4 @@ const historicDates: HistoricDate[] = [
   },
 ];
 
-export default historicDates;
+export default historicEvents;

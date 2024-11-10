@@ -9,9 +9,9 @@ type Props = {
 export default function DatesPresenter({ startYear, endYear }: Props): React.ReactNode {
   return (
     <div className={styles.container}>
-      <span className={styles.yearStart}>{startYear}</span>
+      <time className={styles.yearStart} dateTime={startYear.toString()}>{startYear}</time>
       &nbsp;
-      <span className={styles.yearEnd}>{endYear}</span>
+      <time className={styles.yearEnd} dateTime={endYear.toString()}>{endYear}</time>
     </div>
   );
 }
