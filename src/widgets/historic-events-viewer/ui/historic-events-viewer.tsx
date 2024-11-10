@@ -1,8 +1,12 @@
 import React from 'react';
 import * as styles from './historic-events-viewer.module.scss';
 import DatesPresenter from '../../../entities/dates-presenter';
-import EventCard from '../../../entities/event-card';
+import EventsList from '../../../features/events-list';
 import events from '../../../shared/mocks/historic-events';
+import HistoricEventsCategory from '../../../shared/model/historic-events-category';
+
+//  TODO: Удалить после отладки
+const scienceEvents = events.filter((event) => event.category === HistoricEventsCategory.Science);
 
 export default function HistoricEventsViewer(): React.ReactNode {
   return (
@@ -12,8 +16,8 @@ export default function HistoricEventsViewer(): React.ReactNode {
         startYear={2015}
         endYear={2022}
       />
-      <EventCard
-        event={events[0]}
+      <EventsList
+        events={scienceEvents}
       />
     </section>
   );

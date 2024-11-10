@@ -1,0 +1,19 @@
+@import '/src/shared/ui/variables.scss';
+
+.list {
+  display: flex;
+  column-gap: 25px;
+  margin: 0;
+  margin-top: 57px;
+  padding: 0;
+  padding-top: 20px;
+  box-sizing: border-box;
+  list-style: none;
+  border-top: 1px solid #c7cdd9;
+
+  @media (min-width: $desktop-min-width) {
+    padding-top: 0;
+    column-gap: 80px;
+    border-top: none;
+  }
+}

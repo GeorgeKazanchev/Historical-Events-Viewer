@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './event-card.module.scss';
-import HistoricEvent from '../../../shared/model/historic-event';
+import type HistoricEvent from '../../../shared/model/historic-event';
 
 type Props = {
   event: HistoricEvent;
