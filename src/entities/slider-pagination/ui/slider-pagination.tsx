@@ -22,7 +22,7 @@ function getBullets(currentPage: number, totalPages: number): JSX.Element[] {
 
 export default function SliderPagination({ currentPage, totalPages }: Props): React.ReactNode {
   return (
-    <div className={styles.slider}>
+    <div className={styles.pagination}>
       {getBullets(currentPage, totalPages)}
     </div>
   );
