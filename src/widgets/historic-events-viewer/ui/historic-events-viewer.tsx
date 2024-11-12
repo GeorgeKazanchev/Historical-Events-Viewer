@@ -1,31 +1,21 @@
 import React from 'react';
 import * as styles from './historic-events-viewer.module.scss';
-import DatesPresenter from '../../../entities/dates-presenter';
-import CircularSlider from '../../../features/circular-slider';
-import EventsList from '../../../features/events-list';
-import events from '../../../shared/mocks/historic-events';
-import HistoricEventsCategory from '../../../shared/model/historic-events-category';
+import HistoricEventsSlider from '../../historic-events-slider';
+import getEventsByCategories from '../../../shared/model/get-events-by-categories';
+import type HistoricEvent from '../../../shared/model/historic-event';
 
-//  TODO: Удалить после отладки
-const scienceEvents = events
-  .filter((event) => event.category === HistoricEventsCategory.Science)
-  .sort((a, b) => a.year - b.year);
+type Props = {
+  events: HistoricEvent[];
+};
 
-const eventsYears = scienceEvents.map((event) => event.year);
-const startYear = Math.min(...eventsYears);
-const endYear = Math.max(...eventsYears);
+export default function HistoricEventsViewer({ events }: Props): React.ReactNode {
+  const eventsByCategories = getEventsByCategories(events);
 
-export default function HistoricEventsViewer(): React.ReactNode {
   return (
-    <section className={styles.container}>
+    <section className={styles.eventsViewer}>
       <h2 className={styles.title}>Исторические<br/>даты</h2>
-      <DatesPresenter
-        startYear={startYear}
-        endYear={endYear}
-      />
-      <CircularSlider />
-      <EventsList
-        events={scienceEvents}
+      <HistoricEventsSlider
+        eventsByCategories={eventsByCategories}
       />
     </section>
   );
