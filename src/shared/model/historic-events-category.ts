@@ -1,8 +1,8 @@
 enum HistoricEventsCategory {
-  Science,
-  Literature,
-  Cinematography,
-  Theater,
+  Science = 'Science',
+  Literature = 'Literature',
+  Cinematography = 'Cinematography',
+  Theater = 'Theater',
 };
 
 export default HistoricEventsCategory;
