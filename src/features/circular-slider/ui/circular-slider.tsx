@@ -49,6 +49,7 @@ function getBullets(
   for (let i = 0; i < points.length; ++i) {
     bullets.push((
       <CircularSliderBullet
+        key={i + 1}
         number={i + 1}
         title={eventsGroups[i].category}
         isReduced={(i + 1) !== currentGroup}
