@@ -7,6 +7,14 @@ type Props = {
   totalPages: number;
 };
 
+export default function SliderPagination({ currentPage, totalPages }: Props): React.ReactNode {
+  return (
+    <div className={styles.pagination}>
+      {getBullets(currentPage, totalPages)}
+    </div>
+  );
+}
+
 function getBullets(currentPage: number, totalPages: number): JSX.Element[] {
   const bullets = [];
   for (let page = 1; page <= totalPages; ++page) {
@@ -18,12 +26,4 @@ function getBullets(currentPage: number, totalPages: number): JSX.Element[] {
     ));
   }
   return bullets;
-}
-
-export default function SliderPagination({ currentPage, totalPages }: Props): React.ReactNode {
-  return (
-    <div className={styles.pagination}>
-      {getBullets(currentPage, totalPages)}
-    </div>
-  );
 }

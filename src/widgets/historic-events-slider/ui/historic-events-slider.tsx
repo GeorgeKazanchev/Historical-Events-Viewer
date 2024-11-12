@@ -52,7 +52,10 @@ export default function HistoricEventsSlider({
             </div>
           </div>
 
-          <CircularSlider>
+          <CircularSlider
+            eventsGroups={eventsByCategories}
+            currentGroup={currentCategory}
+          >
             <DatesPresenter
               startYear={startYear}
               endYear={endYear}
