@@ -7,10 +7,26 @@ $splitter-border: 1px solid rgba($gray, 0.1);
   position: absolute;
   top: 215px;
   left: calc(50% - $circle-diameter / 2);
+  display: none;
   width: $circle-diameter;
   aspect-ratio: 1;
   border: 1px solid rgba($gray, 0.2);
   border-radius: 50%;
+
+  @media (min-width: $desktop-min-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.horizontal-splitter,
+.vertical-splitter {
+  display: none;
+
+  @media (min-width: $desktop-min-width) {
+    display: block;
+  }
 }
 
 .horizontal-splitter {
@@ -20,6 +36,9 @@ $splitter-border: 1px solid rgba($gray, 0.1);
   right: 0;
   height: 480px;
   border-bottom: $splitter-border;
+
+  //  Полосы свёрстаны с помощью div-ов. Чтобы эти div-ы не перекрывали интерактивные эл-ты, помещаем их на задний план
+  z-index: -1000;
 }
 
 .vertical-splitter {
@@ -29,14 +48,7 @@ $splitter-border: 1px solid rgba($gray, 0.1);
   left: 0;
   width: 50%;
   border-right: $splitter-border;
-}
 
-.circle,
-.horizontal-splitter,
-.vertical-splitter {
-  display: none;
-
-  @media (min-width: $desktop-min-width) {
-    display: block;
-  }
+  //  Полосы свёрстаны с помощью div-ов. Чтобы эти div-ы не перекрывали интерактивные эл-ты, помещаем их на задний план
+  z-index: -1000;
 }

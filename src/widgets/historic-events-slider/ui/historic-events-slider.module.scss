@@ -1,0 +1,48 @@
+@import '/src/shared/ui/variables.scss';
+
+.dates-presenter-mobile {
+  margin-top: 56px;
+
+  @media (min-width: $desktop-min-width) {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  order: 1;
+  margin-top: 78px;
+
+  @media (min-width: $desktop-min-width) {
+    order: -1;
+    margin-top: 393px;
+  }
+}
+
+.controls-mobile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+
+  @media (min-width: $desktop-min-width) {
+    min-height: 88px;
+  }
+}
+
+.navigation-mobile {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.pagination-mobile {
+  @media (min-width: $desktop-min-width) {
+    display: none;
+  }
+}
