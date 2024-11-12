@@ -1,0 +1,36 @@
+@import '/src/shared/ui/variables.scss';
+
+$background-color: #ffffff;
+
+.button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: $background-color;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 0 rgba($blue, 0.1);
+  cursor: pointer;
+
+  @media (min-width: $desktop-min-width) {
+    display: flex;
+  }
+
+  &:hover {
+    box-shadow: 0 0 15px 0 rgba($blue, 0.2);
+  }
+
+  &:active {
+    background-color: rgba($background-color, 0.5);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $blue;
+  }
+}
+
+.arrow-right {
+  transform: rotateY(180deg);
+}
