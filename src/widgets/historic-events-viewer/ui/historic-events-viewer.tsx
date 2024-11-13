@@ -8,15 +8,19 @@ type Props = {
   events: HistoricEvent[];
 };
 
-export default function HistoricEventsViewer({ events }: Props): React.ReactNode {
+export default function HistoricEventsViewer({
+  events,
+}: Props): React.ReactNode {
   const eventsByCategories = getEventsByCategories(events);
 
   return (
     <section className={styles.eventsViewer}>
-      <h2 className={styles.title}>Исторические<br/>даты</h2>
-      <HistoricEventsSlider
-        eventsByCategories={eventsByCategories}
-      />
+      <h2 className={styles.title}>
+        Исторические
+        <br />
+        даты
+      </h2>
+      <HistoricEventsSlider eventsByCategories={eventsByCategories} />
     </section>
   );
 }

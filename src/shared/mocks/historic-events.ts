@@ -6,25 +6,29 @@ const historicEvents: HistoricEvent[] = [
     id: 1,
     year: 2015,
     category: Category.Science,
-    description: '13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды',
+    description:
+      '13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды',
   },
   {
     id: 2,
     year: 2016,
     category: Category.Science,
-    description: 'Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую обозначение GN-z11',
+    description:
+      'Телескоп «Хаббл» обнаружил самую удалённую из всех обнаруженных галактик, получившую обозначение GN-z11',
   },
   {
     id: 3,
     year: 2017,
     category: Category.Science,
-    description: 'Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi',
+    description:
+      'Компания Tesla официально представила первый в мире электрический грузовик Tesla Semi',
   },
   {
     id: 4,
     year: 1992,
     category: Category.Literature,
-    description: 'Нобелевская премия по литературе — Дерек Уолкотт, «За блестящий образец карибского эпоса в 64 разделах»',
+    description:
+      'Нобелевская премия по литературе — Дерек Уолкотт, «За блестящий образец карибского эпоса в 64 разделах»',
   },
   {
     id: 5,
@@ -48,13 +52,15 @@ const historicEvents: HistoricEvent[] = [
     id: 8,
     year: 1989,
     category: Category.Cinematography,
-    description: '«Назад в будущее 2»/Back To The Future 2, США (реж. Роберт Земекис)',
+    description:
+      '«Назад в будущее 2»/Back To The Future 2, США (реж. Роберт Земекис)',
   },
   {
     id: 9,
     year: 1991,
     category: Category.Cinematography,
-    description: '«Семейка Аддамс»/The Addams Family, США (реж. Барри Зонненфельд)',
+    description:
+      '«Семейка Аддамс»/The Addams Family, США (реж. Барри Зонненфельд)',
   },
   {
     id: 10,

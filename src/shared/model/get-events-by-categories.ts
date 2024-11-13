@@ -1,7 +1,9 @@
 import type HistoricEvent from './historic-event';
 import type HistoricEventsGroup from './historic-events-group';
 
-export default function getEventsByCategories(events: HistoricEvent[]): HistoricEventsGroup[] {
+export default function getEventsByCategories(
+  events: HistoricEvent[],
+): HistoricEventsGroup[] {
   const categories = Array.from(new Set(events.map((event) => event.category)));
 
   const eventsByCategories: HistoricEventsGroup[] = [];
@@ -12,7 +14,7 @@ export default function getEventsByCategories(events: HistoricEvent[]): Historic
 
     eventsByCategories.push({
       events: eventsOfCategory,
-      category: category,
+      category,
     });
   });
 

@@ -3,6 +3,6 @@ enum HistoricEventsCategory {
   Literature = 'Литература',
   Cinematography = 'Кино',
   Theater = 'Театр',
-};
+}
 
 export default HistoricEventsCategory;

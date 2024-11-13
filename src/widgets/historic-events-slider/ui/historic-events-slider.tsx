@@ -14,7 +14,7 @@ type Props = {
 export default function HistoricEventsSlider({
   eventsByCategories,
 }: Props): React.ReactNode {
-  const [currentCategory, setcurrentCategory] = React.useState(1);
+  const [currentCategory] = React.useState(1);
 
   //  TODO: Добавить проверку на существование
   const eventsGroup = eventsByCategories[currentCategory - 1];
@@ -27,10 +27,7 @@ export default function HistoricEventsSlider({
   return (
     <>
       <div className={styles.datesPresenterMobile}>
-        <DatesPresenter
-          startYear={startYear}
-          endYear={endYear}
-        />
+        <DatesPresenter startYear={startYear} endYear={endYear} />
       </div>
 
       <div className={styles.container}>
@@ -56,10 +53,7 @@ export default function HistoricEventsSlider({
             eventsGroups={eventsByCategories}
             currentGroup={currentCategory}
           >
-            <DatesPresenter
-              startYear={startYear}
-              endYear={endYear}
-            />
+            <DatesPresenter startYear={startYear} endYear={endYear} />
           </CircularSlider>
         </div>
       </div>

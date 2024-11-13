@@ -7,6 +7,6 @@ type Props = {
 
 export default function SliderBullet({ isFaded }: Props): React.ReactNode {
   return (
-    <div className={`${styles.bullet} ${isFaded ? styles.bulletFaded : ''}`}></div>
+    <div className={`${styles.bullet} ${isFaded ? styles.bulletFaded : ''}`} />
   );
 }

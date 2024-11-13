@@ -6,12 +6,19 @@ type Props = {
   endYear: number;
 };
 
-export default function DatesPresenter({ startYear, endYear }: Props): React.ReactNode {
+export default function DatesPresenter({
+  startYear,
+  endYear,
+}: Props): React.ReactNode {
   return (
     <div className={styles.datesPresenter}>
-      <time className={styles.yearStart} dateTime={startYear.toString()}>{startYear}</time>
+      <time className={styles.yearStart} dateTime={startYear.toString()}>
+        {startYear}
+      </time>
       &nbsp;
-      <time className={styles.yearEnd} dateTime={endYear.toString()}>{endYear}</time>
+      <time className={styles.yearEnd} dateTime={endYear.toString()}>
+        {endYear}
+      </time>
     </div>
   );
 }

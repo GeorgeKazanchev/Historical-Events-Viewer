@@ -16,7 +16,7 @@ const CIRCLE_RADIUS = 265;
 export default function CircularSlider({
   eventsGroups,
   currentGroup,
-  children
+  children,
 }: Props): React.ReactNode {
   return (
     <>
@@ -25,15 +25,15 @@ export default function CircularSlider({
         {children}
       </div>
 
-      <div className={styles.horizontalSplitter}></div>
-      <div className={styles.verticalSplitter}></div>
+      <div className={styles.horizontalSplitter} />
+      <div className={styles.verticalSplitter} />
     </>
   );
 }
 
 function getBullets(
   eventsGroups: HistoricEventsGroup[],
-  currentGroup: number
+  currentGroup: number,
 ): JSX.Element[] {
   const angles: number[] = [];
   for (let i = 0; i < eventsGroups.length; ++i) {
@@ -47,16 +47,16 @@ function getBullets(
 
   const bullets: JSX.Element[] = [];
   for (let i = 0; i < points.length; ++i) {
-    bullets.push((
+    bullets.push(
       <CircularSliderBullet
         key={i + 1}
         number={i + 1}
         title={eventsGroups[i].category}
-        isReduced={(i + 1) !== currentGroup}
+        isReduced={i + 1 !== currentGroup}
         coordinates={points[i]}
         circleRadius={CIRCLE_RADIUS}
-      />
-    ));
+      />,
+    );
   }
   return bullets;
 }

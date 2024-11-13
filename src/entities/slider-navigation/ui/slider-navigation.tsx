@@ -7,21 +7,19 @@ type Props = {
   totalPages: number;
 };
 
-export default function SliderNavigation({ currentPage, totalPages }: Props): React.ReactNode {
+export default function SliderNavigation({
+  currentPage,
+  totalPages,
+}: Props): React.ReactNode {
   return (
     <div className={styles.navigation}>
       <div className={styles.pagesNumbers}>
-        {currentPage.toFixed().padStart(2, '0')}/{totalPages.toFixed().padStart(2, '0')}
+        {currentPage.toFixed().padStart(2, '0')}/
+        {totalPages.toFixed().padStart(2, '0')}
       </div>
       <div className={styles.buttons}>
-        <NavigationButton
-          arrowRight={false}
-          disabled={currentPage === 1}
-        />
-        <NavigationButton
-          arrowRight={true}
-          disabled={currentPage === totalPages}
-        />
+        <NavigationButton arrowRight={false} disabled={currentPage === 1} />
+        <NavigationButton arrowRight disabled={currentPage === totalPages} />
       </div>
     </div>
   );

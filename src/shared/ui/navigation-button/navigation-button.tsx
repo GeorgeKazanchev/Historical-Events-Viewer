@@ -8,11 +8,14 @@ type Props = {
 
 const desktopMinWidth = 1920;
 
-export default function NavigationButton({ arrowRight = false, disabled = false }: Props): React.ReactNode {
+export default function NavigationButton({
+  arrowRight = false,
+  disabled = false,
+}: Props): React.ReactNode {
   return (
     <button
       className={`${styles.button} ${disabled ? styles.buttonDisabled : ''}`}
-      type='button'
+      type="button"
       disabled={disabled}
     >
       <picture
@@ -20,12 +23,9 @@ export default function NavigationButton({ arrowRight = false, disabled = false 
       >
         <source
           media={`(min-width: ${desktopMinWidth}px)`}
-          srcSet='img/arrow-desktop.svg'
+          srcSet="img/arrow-desktop.svg"
         />
-        <img
-          src='img/arrow-mobile.svg'
-          alt=''
-        />
+        <img src="img/arrow-mobile.svg" alt="" />
       </picture>
     </button>
   );

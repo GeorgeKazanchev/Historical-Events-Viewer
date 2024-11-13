@@ -31,10 +31,16 @@ export default function CircularSliderBullet({
         top: coordinates.y + circleRadius - bulletRadius,
       }}
     >
-      <div className={`${styles.circle} ${isReduced ? styles.circleReduced : ''}`}>
+      <div
+        className={`${styles.circle} ${isReduced ? styles.circleReduced : ''}`}
+      >
         <span className={styles.number}>{number.toFixed()}</span>
       </div>
-      <span className={`${styles.title} ${isReduced ? styles.titleReduced : ''}`}>{title}</span>
+      <span
+        className={`${styles.title} ${isReduced ? styles.titleReduced : ''}`}
+      >
+        {title}
+      </span>
     </div>
   );
 }

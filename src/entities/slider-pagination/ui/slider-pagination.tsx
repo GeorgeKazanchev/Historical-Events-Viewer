@@ -7,7 +7,10 @@ type Props = {
   totalPages: number;
 };
 
-export default function SliderPagination({ currentPage, totalPages }: Props): React.ReactNode {
+export default function SliderPagination({
+  currentPage,
+  totalPages,
+}: Props): React.ReactNode {
   return (
     <div className={styles.pagination}>
       {getBullets(currentPage, totalPages)}
@@ -18,12 +21,7 @@ export default function SliderPagination({ currentPage, totalPages }: Props): Re
 function getBullets(currentPage: number, totalPages: number): JSX.Element[] {
   const bullets = [];
   for (let page = 1; page <= totalPages; ++page) {
-    bullets.push((
-      <SliderBullet
-        key={page}
-        isFaded={page !== currentPage}
-      />
-    ));
+    bullets.push(<SliderBullet key={page} isFaded={page !== currentPage} />);
   }
   return bullets;
 }

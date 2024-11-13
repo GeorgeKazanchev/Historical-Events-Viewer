@@ -11,12 +11,8 @@ export default function EventsList({ events }: Props): React.ReactNode {
   return (
     <ul className={styles.list}>
       {events.map((event) => (
-        <li
-          key={event.id}
-        >
-          <EventCard
-            event={event}
-          />
+        <li key={event.id}>
+          <EventCard event={event} />
         </li>
       ))}
     </ul>

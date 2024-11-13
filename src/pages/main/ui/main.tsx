@@ -11,9 +11,7 @@ export default function Main({ events }: Props): React.ReactNode {
   return (
     <>
       <h1 className={styles.visuallyHidden}>Главная страница</h1>
-      <HistoricEventsViewer
-        events={events}
-      />
+      <HistoricEventsViewer events={events} />
     </>
   );
 }
