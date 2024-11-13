@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+  font-display: swap;
+}
+
+body {
+  background-color: #f4f5f9;
+}
+
+#root {
+  height: 1px;
+  min-height: 100%;
+}
