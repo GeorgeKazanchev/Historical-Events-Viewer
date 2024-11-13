@@ -1,5 +1,11 @@
 @import '/src/shared/ui/variables';
 
+$radius: 28px;
+$reduced-radius: 3px;
+$delta-radius: $radius - $reduced-radius;
+$background-color: #f4f5f9;
+$border: 1px solid rgba(#303e58, 0.5);
+
 .bullet {
   display: flex;
   align-items: center;
@@ -10,13 +16,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 56px;
+  width: 2 * $radius;
   aspect-ratio: 1;
   box-sizing: border-box;
-  background-color: #f4f5f9;
+  background-color: $background-color;
   background-clip: content-box;
-  border: 1px solid rgba(#303e58, 0.5);
+  border: $border;
   border-radius: 50%;
+  transition: all 0.5s;
   cursor: pointer;
 }
 
@@ -37,12 +44,23 @@
 }
 
 .circle-reduced {
-  width: 6px;
+  width: 2 * $reduced-radius;
   background-color: $gray;
   border: none;
 
   &>.number {
     display: none;
+  }
+}
+
+.circle-reduced:hover {
+  width: 2 * $radius;
+  background-color: $background-color;
+  border: $border;
+  transform: translate(-$delta-radius, -$delta-radius);
+
+  &>.number {
+    display: block;
   }
 }
 
