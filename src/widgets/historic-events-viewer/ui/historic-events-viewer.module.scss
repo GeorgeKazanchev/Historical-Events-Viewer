@@ -1,4 +1,5 @@
-@import '/src/shared/ui/variables.scss';
+@use 'sass:color';
+@import '/src/shared/ui/variables';
 
 $desktop-padding-left: 80px;
 $desktop-padding-right: 40px;
@@ -44,7 +45,7 @@ $desktop-padding-right: 40px;
       top: 7px;
       bottom: 7px;
       width: 5px;
-      background-color: mix($blue, $pink, 50%);
+      background-color: color.mix($blue, $pink, 50%);
       background-image: linear-gradient(to bottom, $blue, $pink);
     }
   }

@@ -1,4 +1,4 @@
-@import '/src/shared/ui/mixins.scss';
+@import '/src/shared/ui/mixins';
 
 .visually-hidden {
   @include visually-hidden;
