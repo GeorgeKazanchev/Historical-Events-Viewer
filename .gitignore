@@ -13,4 +13,6 @@ node_modules/
 public/**/main.css
 public/*.js
 public/*.js.map
+public/*.woff
+public/*.woff2
 main.js.LICENSE.txt

@@ -20,10 +20,10 @@ export default function NavigationButton({ arrowRight = false, disabled = false 
       >
         <source
           media={`(min-width: ${desktopMinWidth}px)`}
-          srcSet='/img/arrow-desktop.svg'
+          srcSet='img/arrow-desktop.svg'
         />
         <img
-          src='/img/arrow-mobile.svg'
+          src='img/arrow-mobile.svg'
           alt=''
         />
       </picture>
