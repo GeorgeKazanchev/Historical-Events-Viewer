@@ -15,7 +15,7 @@
 
 .controls {
   order: 1;
-  margin-top: 78px;
+  margin-top: 103px;
 
   @media (min-width: $desktop-min-width) {
     order: -1;
@@ -27,7 +27,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 50px;
 
   @media (min-width: $desktop-min-width) {
@@ -38,7 +38,7 @@
 .navigation {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -30px;
 }
 
 .pagination-mobile {

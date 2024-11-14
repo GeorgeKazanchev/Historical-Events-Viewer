@@ -68,6 +68,18 @@ const historicEvents: HistoricEvent[] = [
     category: Category.Theater,
     description: 'Возобновлено издание журнала «Театр»',
   },
+  {
+    id: 11,
+    year: 1987,
+    category: Category.Cinematography,
+    description: '«Хищник»/Predator, США (реж. Джон Мактирнан)',
+  },
+  {
+    id: 12,
+    year: 1987,
+    category: Category.Cinematography,
+    description: '«Хищник»/Predator, США (реж. Джон Мактирнан)',
+  },
 ];
 
 export default historicEvents;
