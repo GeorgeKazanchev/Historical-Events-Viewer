@@ -5,11 +5,15 @@ import NavigationButton from '../../../shared/ui/navigation-button/navigation-bu
 type Props = {
   currentPage: number;
   totalPages: number;
+  onPrevButtonClick: () => void;
+  onNextButtonClick: () => void;
 };
 
 export default function SliderNavigation({
   currentPage,
   totalPages,
+  onPrevButtonClick,
+  onNextButtonClick,
 }: Props): React.ReactNode {
   return (
     <div className={styles.navigation}>
@@ -18,8 +22,16 @@ export default function SliderNavigation({
         {totalPages.toFixed().padStart(2, '0')}
       </div>
       <div className={styles.buttons}>
-        <NavigationButton arrowRight={false} disabled={currentPage === 1} />
-        <NavigationButton arrowRight disabled={currentPage === totalPages} />
+        <NavigationButton
+          arrowRight={false}
+          disabled={currentPage === 1}
+          onClick={onPrevButtonClick}
+        />
+        <NavigationButton
+          arrowRight
+          disabled={currentPage === totalPages}
+          onClick={onNextButtonClick}
+        />
       </div>
     </div>
   );

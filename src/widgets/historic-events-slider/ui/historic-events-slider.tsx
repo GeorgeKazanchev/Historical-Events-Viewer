@@ -14,7 +14,7 @@ type Props = {
 export default function HistoricEventsSlider({
   eventsByCategories,
 }: Props): React.ReactNode {
-  const [currentCategory] = React.useState(1);
+  const [currentCategory, setCurrentCategory] = React.useState(1);
 
   //  TODO: Добавить проверку на существование
   const eventsGroup = eventsByCategories[currentCategory - 1];
@@ -23,6 +23,14 @@ export default function HistoricEventsSlider({
   const eventsYears = eventsGroup.events.map((event) => event.year);
   const startYear = Math.min(...eventsYears);
   const endYear = Math.max(...eventsYears);
+
+  const handleSwitchToPrevCategory = () => {
+    setCurrentCategory(currentCategory - 1);
+  };
+
+  const handleSwitchToNextCategory = () => {
+    setCurrentCategory(currentCategory + 1);
+  };
 
   return (
     <>
@@ -35,10 +43,12 @@ export default function HistoricEventsSlider({
 
         <div className={styles.controls}>
           <div className={styles.controlsMobile}>
-            <div className={styles.navigationMobile}>
+            <div className={styles.navigation}>
               <SliderNavigation
                 currentPage={currentCategory}
                 totalPages={totalCategories}
+                onPrevButtonClick={handleSwitchToPrevCategory}
+                onNextButtonClick={handleSwitchToNextCategory}
               />
             </div>
             <div className={styles.paginationMobile}>
